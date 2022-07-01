@@ -1,3 +1,3 @@
 # HAPPY BIRTHDAY
-_Flutter app with a bday wish_ 
-_with a bday cake image_
+_Flutter app with a Birthday wish_ 
+_with a Birthday cake image_
