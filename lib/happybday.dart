@@ -16,22 +16,27 @@ class happyBday extends StatelessWidget {
           width: 300,
         ),
         SizedBox(
-          width: 300,
-          
-          child: TextFormField(
-            
-            
-            decoration: InputDecoration(
-                border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(10.0)), 
-                ),hintText: 'enter your name',
+            width: 300,
+            child: TextFormField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                ),
+                hintText: 'enter your name',
                 hintStyle: TextStyle(decorationColor: Colors.blue),
-          ),
-        )),
+              ),
+            )),
         ElevatedButton(
           onPressed: () {
-            print('hello');
-          },
-          child: Text('wish',style: TextStyle(color: Color.fromARGB(255, 8, 6, 43)),),
+            showDialog(context: context, builder: (context)=> AlertDialog(content: Text('HAPPY BIRTHDAY'),
+            actions: [TextButton
+            ( child: Text('OK'),
+            onPressed: () =>Navigator.pop(context),)],
+            ));          },
+          child: Text(
+            'wish',
+            style: TextStyle(color: Color.fromARGB(255, 8, 6, 43)),
+          ),
           style: ElevatedButton.styleFrom(
               primary: Color.fromARGB(255, 229, 231, 233)),
         )

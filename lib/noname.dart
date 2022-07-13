@@ -8,13 +8,13 @@ class unknownName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text('i dont know my birthday',style: TextStyle(color: Colors.white),),SizedBox(width: 12),
-        Icon(Icons.cake,
-        color:Colors.white),
-      ]
-    );
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      Text(
+        'i dont know my birthday',
+        style: TextStyle(color: Colors.white),
+      ),
+      SizedBox(width: 12),
+      Icon(Icons.cake, color: Colors.white),
+    ]);
   }
 }
