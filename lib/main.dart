@@ -15,16 +15,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'HAPPY BIRTHDAY',
         home: Scaffold(
-          backgroundColor: Colors.pinkAccent,
-          
             appBar: AppBar(title: Text('Happy Birthday')),
             body: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  happyBday(),
-                  unknownName()
-                ],
+              child: Container(
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(colors: [
+                  Colors.white,
+                  Color.fromARGB(255, 80, 152, 211)
+                ])),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [happyBday(), unknownName()],
+                ),
               ),
             )));
   }
