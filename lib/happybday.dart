@@ -3,9 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class happyBday extends StatelessWidget {
+class happyBday extends StatefulWidget {
   const happyBday({Key? key}) : super(key: key);
 
+  @override
+  State<happyBday> createState() => _happyBdayState();
+}
+
+class _happyBdayState extends State<happyBday> {
+  final myController = TextEditingController();
+  @override
+  void dispose()
+  {
+    myController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,6 +30,7 @@ class happyBday extends StatelessWidget {
         SizedBox(
             width: 300,
             child: TextFormField(
+              controller: myController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -28,7 +41,7 @@ class happyBday extends StatelessWidget {
             )),
         ElevatedButton(
           onPressed: () {
-            showDialog(context: context, builder: (context)=> AlertDialog(content: Text('HAPPY BIRTHDAY'),
+            showDialog(context: context, builder: (context)=> AlertDialog(content: Text('HAPPY BIRTHDAY ${myController.text}'),
             actions: [TextButton
             ( child: Text('OK'),
             onPressed: () =>Navigator.pop(context),)],
