@@ -11,9 +11,10 @@ class unknownName extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('i dont know my birthday'),SizedBox(width: 12),
-        Icon(Icons.cake),
-      ],
+        Text('i dont know my birthday',style: TextStyle(color: Colors.white),),SizedBox(width: 12),
+        Icon(Icons.cake,
+        color:Colors.white),
+      ]
     );
   }
 }
